@@ -1,1 +1,24 @@
-<p>portfolio-table works!</p>
+<div class="portfolio-container">
+    <h2>Stock Portfolio</h2>
+    <table class="portfolio-table">
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Empresa</th>
+          <th>Data da Compra</th>
+          <th>Quantidade</th>
+          <th>Preço de Compra ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of stocks">
+          <td>{{ stock.symbol }}</td>
+          <td>{{ stock.name }}</td>
+          <td>{{ stock.date }}</td>
+          <td>{{ stock.quantity }}</td>
+          <td>{{ stock.price | number:'1.2-2' }}$</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

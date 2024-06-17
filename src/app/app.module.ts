@@ -3,6 +3,8 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PortfolioTableComponent } from './portfolio-table/portfolio-table.component';
+import { HttpClientModule } from '@angular/common/http';
+import { StocksService } from './stocks.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,11 @@ import { PortfolioTableComponent } from './portfolio-table/portfolio-table.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    StocksService
   ],
   bootstrap: [AppComponent]
 })

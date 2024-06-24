@@ -1,0 +1,57 @@
+<div class="loading-message" *ngIf="loading">A página está a ser carregada, por favor aguarde...</div>
+<div *ngIf="!loading">
+  <div class="tabela-container">
+    <table class="table-container">
+      <thead>
+        <tr>
+          <!-- Cabeçalho das colunas da tabela  -->
+          <th>Ticker</th>
+          <th>Preço Médio de Compra</th>
+          <th>Quantidade</th>
+          <th>Preço Atual</th>
+          <th>Total Investido</th>
+          <th>Lucro em €</th>
+          <th>Lucro %</th>
+          <th>Data de Compra</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of stocks; let i = index">
+          <td>
+            <!--Input do ticker-->
+            <input [(ngModel)]="stock.ticker" placeholder="Ticker" (change)="buscarPrecoAtual(stock)">
+          </td>
+          <td>
+            <!--Input do preco medio-->
+            <input [(ngModel)]="stock.precoMedio" placeholder="Preço Médio" type="number">
+          </td>
+          <td>
+            <!--Input da quantidade do stock-->
+            <input [(ngModel)]="stock.quantidade" placeholder="Quantidade" type="number">
+          </td>
+          <td>{{ stock.precoAtual }}</td> <!--Mostrar o preço atual-->
+          <td>{{ calcularTotalInvestido(stock) }}</td> <!--Mostrar o total investido-->
+          <!--Mostrar o lucro em euros numa classe condicional-->
+          <td [ngClass]="{'lucro': calcularLucroEuro(stock) > 0, 'prejuizo': calcularLucroEuro(stock) < 0}">
+            {{ calcularLucroEuro(stock) }}
+          </td>
+          <!--Mostrar o lucro em % numa classe condicional-->
+          <td [ngClass]="{'lucro': calcularLucroPercentagem(stock) > 0, 'prejuizo': calcularLucroPercentagem(stock) < 0}">
+            {{ calcularLucroPercentagem(stock) }}%
+          </td>
+          <!--Mostrar a data de compra-->
+          <td>{{ stock.dataCompra }}</td>
+          <td>
+            <!--Botao para remover a açao-->
+            <button (click)="removerAcao(i)">Remover</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="add-action-section">
+    <!--Botao para adicionar uma açao-->
+    <button class="add-action-button" (click)="adicionarAcao()">Adicionar Ação</button>
+  </div>
+</div>

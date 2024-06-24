@@ -1,2 +1,48 @@
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "../node_modules/font-awesome/css/font-awesome.min.css";
+/*css para mudança de cor gradual de fundo entre cinza claro e branco e para dar estilo ao titulo*/
+
+/* Importamos a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500&display=swap');
+
+/* Estilo básico do body */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  overflow: hidden;
+  position: relative;
+  animation: backgroundChange 10s infinite; 
+  background-color: #f8f9fa; /* Cor de fundo inicial */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+}
+
+@keyframes backgroundChange {
+  0%, 100% {
+    background-color: #f8f9fa; /* Cor de fundo principal */
+  }
+  25% {
+    background-color: #f2f2f2; /* Cinza muito claro */
+  }
+  50% {
+    background-color: #e6e6e6; /* Cinza claro */
+  }
+  75% {
+    background-color: #d9d9d9; /* Cinza mais escuro */
+  }
+}
+
+
+/* título 'O meu Portfolio'*/
+h1 {
+  font-size: 2rem;
+  color: rgb(148, 50, 50);
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1; /* Mantém o texto à frente do fundo */
+}
+

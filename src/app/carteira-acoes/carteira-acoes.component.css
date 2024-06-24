@@ -1,0 +1,117 @@
+
+/* Estilo para a tabela */
+.table-container {
+  width: 90%; /* Reduzindo a largura para 90% da largura do container pai */
+  margin: 0 auto; /* Centralizando horizontalmente */
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fundo branco para a tabela */
+}
+
+/* Estilo para as células da tabela */
+.table-container th, .table-container td {
+  padding: 12px; /* Aumentando o padding das células */
+  text-align: center;
+  border: 1px solid #ddd; /* Adicionando borda para melhor visualização */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo para o cabeçalho da tabela */
+.table-container th {
+  background-color: #dec7c7;
+  color: #333;
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Efeito ao passar o cursor sobre as células */
+.table-container th:hover, .table-container td:hover {
+  background-color: #e0e0e0;
+}
+
+/* Estilo para as linhas da tabela */
+.table-container tbody tr {
+  transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o cursor sobre as linhas */
+.table-container tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Estilo para os botões */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transição para a cor de fundo e sombra */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Efeito ao passar o cursor sobre os botões */
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Estilo para as mensagens de carregamento */
+.loading-message {
+  padding: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size: 16px; /* Aumentando o tamanho da fonte */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo para os inputs */
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: border-color 0.3s; /* Transição suave para a cor da borda */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  border-color: #007bff; /* Borda azul ao focar */
+  outline: none; /* Remover o outline padrão */
+}
+
+/* Estilo para a seção de adicionar ação */
+.add-action-section {
+  margin-top: 20px;
+  text-align: center; /* Centralizando o texto no centro */
+}
+
+/* Estilo para o botão de adicionar ação */
+.add-action-button {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transição para a cor de fundo e sombra */
+  display: inline-block; /* Garante que o botão não ocupe toda a largura */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Efeito ao passar o mouse sobre o botão de adicionar ação */
+.add-action-button:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Classes para lucro e prejuízo */
+.lucro {
+  color: green;
+  font-weight: bold; /* Texto em negrito */
+}
+
+.prejuizo {
+  color: red;
+  font-weight: bold; /* Texto em negrito */
+}

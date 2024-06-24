@@ -1,0 +1,14 @@
+[
+  {
+    "ticker": "ABC",
+    "precoMedio": 200,
+    "quantidade": 5,
+    "dataCompra": "2024-06-17"
+  },
+  {
+    "ticker": "MCD",
+    "precoMedio": 150,
+    "quantidade": 2,
+    "dataCompra": "2024-06-17"
+  }
+]
